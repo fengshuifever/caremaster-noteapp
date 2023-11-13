@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
-import { Note } from '../../App';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import React from "react";
+import { View, Text, StyleSheet, Pressable } from "react-native";
+import { Note } from "../models/models";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 interface NoteListItemProps {
   note: Note;
@@ -11,7 +11,13 @@ interface NoteListItemProps {
   onDelete: (note: Note) => void;
 }
 
-const NoteListItem: React.FC<NoteListItemProps> = ({ note, clientName, categoryName, onEdit, onDelete }) => {
+const NoteListItem: React.FC<NoteListItemProps> = ({
+  note,
+  clientName,
+  categoryName,
+  onEdit,
+  onDelete,
+}) => {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
@@ -21,7 +27,7 @@ const NoteListItem: React.FC<NoteListItemProps> = ({ note, clientName, categoryN
       </View>
       <View style={styles.buttonGroup}>
         <Pressable style={styles.editButton} onPress={() => onEdit(note)}>
-          <Icon name='pencil' size={20} color="white" />
+          <Icon name="pencil" size={20} color="white" />
         </Pressable>
         <Pressable style={styles.deleteButton} onPress={() => onDelete(note)}>
           <Icon name="times" size={20} color="white" />
@@ -34,9 +40,9 @@ const NoteListItem: React.FC<NoteListItemProps> = ({ note, clientName, categoryN
 const styles = StyleSheet.create({
   container: {
     padding: 16,
-    flexDirection:'row',
+    flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: "#ccc",
   },
   textContainer: {
     flexShrink: 1,
@@ -44,38 +50,38 @@ const styles = StyleSheet.create({
   },
   clientText: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   categoryText: {
     fontSize: 14,
-    fontStyle: 'italic',
+    fontStyle: "italic",
   },
   noteText: {
     marginTop: 8,
   },
   buttonGroup: {
-    flexDirection: 'row', // Arrange the buttons horizontally
-    justifyContent: 'flex-end', // Align the buttons to the right
-    alignItems: 'center',
+    flexDirection: "row", // Arrange the buttons horizontally
+    justifyContent: "flex-end", // Align the buttons to the right
+    alignItems: "center",
   },
   editButton: {
-    backgroundColor: 'green', // Customize button color
+    backgroundColor: "green", // Customize button color
     padding: 10,
     width: 40,
     height: 40,
     borderRadius: 5,
     marginRight: 10,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
   deleteButton: {
-    backgroundColor: 'red', // Customize button color
+    backgroundColor: "red", // Customize button color
     width: 40,
     height: 40,
     padding: 10,
     borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
