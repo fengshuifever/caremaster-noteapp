@@ -60,12 +60,12 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   buttonGroup: {
-    flexDirection: "row", // Arrange the buttons horizontally
-    justifyContent: "flex-end", // Align the buttons to the right
+    flexDirection: "row",
+    justifyContent: "flex-end",
     alignItems: "center",
   },
   editButton: {
-    backgroundColor: "green", // Customize button color
+    backgroundColor: "green",
     padding: 10,
     width: 40,
     height: 40,
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   deleteButton: {
-    backgroundColor: "red", // Customize button color
+    backgroundColor: "red",
     width: 40,
     height: 40,
     padding: 10,

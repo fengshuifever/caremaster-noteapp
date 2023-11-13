@@ -97,10 +97,6 @@ const App: React.FC = () => {
     setSelectedNote(null);
   };
 
-  const renderSaveButtonText = () => {
-    return selectedNote ? "Save Changes to Note" : "Save Note";
-  };
-
   const renderNoteItem = ({ item }: { item: Note }) => {
     // Find the client and category based on their IDs
     const client = clients.find((client) => client.id === item.clientId);

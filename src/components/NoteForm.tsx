@@ -213,22 +213,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    justifyContent: "flex-start", // Align elements to the top
+    justifyContent: "flex-start",
   },
   headerText: {
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 20,
-    alignSelf: "flex-end", // Align to the top right
+    alignSelf: "flex-end",
   },
   pickerContainer: {
-    flexDirection: "row", // Arrange pickers in a row
+    flexDirection: "row",
     marginBottom: 20,
-    width: "100%", // Full width
+    width: "100%",
   },
   pickerColumn: {
-    flex: 1, // Equal width for both pickers
-    marginRight: 10, // Space between pickers
+    flex: 1,
+    marginRight: 10,
   },
   pickerLabelText: {
     marginBottom: 5,
@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     marginBottom: 15,
-    width: "100%", // Full width
+    width: "100%",
     verticalAlign: "top",
   },
   buttonContainer: {
